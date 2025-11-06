@@ -1,14 +1,19 @@
-import { useState } from 'react'
-import './App.css'
+import './App.css';
+
+import { AuthProvider } from './AuthContext';
+import LoginControl from './LoginControl';
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      
-    </>
-  )
+    <AuthProvider>
+  <div className='container mt-5'>
+  <h1>Mock AuthContext Example</h1>
+  <LoginControl />
+</div>
+ </AuthProvider>
+ );
+ 
 }
 
-export default App
+export default App;
